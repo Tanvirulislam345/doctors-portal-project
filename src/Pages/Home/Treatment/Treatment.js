@@ -10,7 +10,7 @@ const Treatment = () => {
             <Grid container spacing={2}>
                 <Grid item sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center' }}>
                     <img src={treatment} alt=""
-                        style={{ width: '70%' }}
+                        style={{ width: '80%' }}
                     />
                 </Grid>
                 <Grid item sm={12} md={6} sx={{ display: 'flex', alignItems: 'center' }}>
@@ -21,8 +21,9 @@ const Treatment = () => {
                             Exceptional Dental<br /> Care, on Your Terms
                         </Typography>
 
-                        <Typography color="text.secondary" sx={{ my: 3 }}>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores delectus blanditiis eveniet reprehenderit! Porro doloremquee. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dolorem nam unde sunt facilis iusto recusandae repudiandae harum quis aut pariatur aperiam culpa itaque voluptatibus quasi neque, quam, similique obcaecati.
+                        <Typography variant="body1" color="text.secondary" sx={{ my: 3 }}>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores delectus blanditiis eveniet reprehenderit! Porro doloremquee. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dolorem nam unde sunt facilis iusto recusandae repudiandae harum quis aut pariatur aperiam culpa itaque voluptatibus quasi neque, quam, similique obcaecati
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores delectus blanditiis eveniet reprehenderit! Porro doloremquee. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dolorem nam unde sunt facilis iusto recusandae repudiandae harum quis aut pariatur aperiam culpa itaque voluptatibus quasi neque, quam, similique obcaecati .
                         </Typography>
                         <Button variant="contained" sx={{ width: '150px', mb: 5 }}>Learn More</Button>
                     </Box>
