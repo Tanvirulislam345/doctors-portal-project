@@ -9,7 +9,7 @@ import { Box } from '@mui/system';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({});
-    const { user, userSignIn, loading } = useAuth();
+    const { user, userSignIn, signInUsingGoogle, loading } = useAuth();
     const location = useLocation();
     const history = useHistory();
 
@@ -18,7 +18,7 @@ const Login = () => {
             <CircularProgress />
         </Box>
     } else {
-        const handleOnChange = e => {
+        const handleOnBlur = e => {
             const field = e.target.name;
             const value = e.target.value;
             // console.log(field, value);
@@ -32,6 +32,7 @@ const Login = () => {
             e.preventDefault();
             userSignIn(loginData.email, loginData.password, location, history);
         }
+
         return (
             <Container className="App">
                 <Grid container spacing={2}>
@@ -46,7 +47,7 @@ const Login = () => {
                                 label="Your Email"
                                 type="email"
                                 name="email"
-                                onChange={handleOnChange}
+                                onBlur={handleOnBlur}
                             />
                             <TextField id="standard-basic-password"
                                 sx={{ width: '75%', m: 1 }}
@@ -54,7 +55,7 @@ const Login = () => {
                                 label="Your Password"
                                 type="password"
                                 name="password"
-                                onChange={handleOnChange}
+                                onBlur={handleOnBlur}
                             />
 
                             <Button
@@ -70,17 +71,18 @@ const Login = () => {
                                 create a new account
                             </Link>
                         </Typography>
-                        <Typography variant="h5" sx={{ fontWeight: 'bold', my: 2 }} gutterBottom component="div">
+                        <Typography variant="body1" sx={{ fontWeight: 'bold', my: 2 }} gutterBottom component="div">
                             {
                                 user.email && <Alert severity="success">Login successfull</Alert>
 
                             }
-                            OR
+                            ---------OR-----------
                         </Typography>
                         <Button
                             type="submit"
                             variant="contained"
                             sx={{ width: '75%', m: 1 }}
+                            onClick={() => signInUsingGoogle(location, history)}
                         >Login using google</Button>
                     </Grid>
                     <Grid item xs={12} md={7}>

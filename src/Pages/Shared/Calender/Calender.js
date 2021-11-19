@@ -2,7 +2,7 @@ import React from 'react';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import StaticDatePicker from '@mui/lab/StaticDatePicker';
-import { Typography } from '@mui/material';
+import { TextField, Typography } from '@mui/material';
 
 
 const Calender = ({ date, setDate }) => {
@@ -18,6 +18,7 @@ const Calender = ({ date, setDate }) => {
                     onChange={(newDate) => {
                         setDate(newDate);
                     }}
+                    renderInput={(params) => <TextField {...params} />}
                 />
             </LocalizationProvider>
         </>

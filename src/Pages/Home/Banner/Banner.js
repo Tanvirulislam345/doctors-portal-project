@@ -15,6 +15,7 @@ const varticalCenter = {
     height: '500px'
 }
 const Banner = () => {
+
     return (
         <Box sx={{ flexGrow: 1, mb: 10 }} style={bannerBg}>
             <Container>

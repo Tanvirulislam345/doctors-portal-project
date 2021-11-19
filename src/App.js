@@ -6,10 +6,12 @@ import Login from './Pages/SingUpIn/Login/Login';
 import Register from './Pages/SingUpIn/Register/Register';
 import AuthProvider from './Pages/Context/AuthProvider/AuthProvider';
 import PrivateRoute from './Pages/SingUpIn/PrivateRoute/PrivateRoute';
+import Dashbord from './Pages/Dashbord/DashBord/Dashboard';
 
 function App() {
   return (
     <AuthProvider>
+
       <Router>
         <Switch>
           <Route exact path="/">
@@ -20,6 +22,9 @@ function App() {
           </Route>
           <PrivateRoute path="/appoinment">
             <Appoinment></Appoinment>
+          </PrivateRoute>
+          <PrivateRoute path="/dashbord">
+            <Dashbord></Dashbord>
           </PrivateRoute>
           <Route path="/login">
             <Login></Login>
